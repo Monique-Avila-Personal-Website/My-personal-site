@@ -1,0 +1,211 @@
+@media only screen and (max-width: 700px) {
+  div, .fav-quote {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .fav-quote {
+    display: flex;
+    margin: 20px;
+  }
+}
+
+/* home page styling */
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 55px;
+  background-color:lavender;
+  margin-bottom: 10px;
+}
+
+.name {
+  display:inline-block;
+  font-weight: bolder;
+  font-size: 25px;
+  margin-top: 15px;
+  font-family: 'Ysabeau Infant', sans-serif;
+}
+
+p {
+  font-family: 'Ysabeau Infant', sans-serif;
+}
+
+.pages {
+  margin: 20px;
+  float: right;
+  text-decoration: none;
+}
+
+.pages:hover {
+  background-color: azure;
+  color:cyan;
+}
+/* bro fix this so active page is diff color! */
+.pages::after {
+  background-color: aliceblue;
+  color: crimson;
+}
+
+.fa-twitter {
+  background: #55ACEE;  
+  color: white;  
+}
+
+.fa-linkedin {
+  background: #007bb5;  
+  color: white; 
+}
+
+.fa-github {
+  background-color: #000;
+  color: #ffffff;
+}
+
+.socials, i {
+  display: flexbox;
+  text-align: center;
+  font-size: 25px;
+  margin: 0 20px 0 20px;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color:lavenderblush;
+  
+}
+
+.bio {
+  display: flexbox;
+  margin-top: 70px;
+  margin-left: 25%;
+  text-align: center;
+  width: 50%;
+}
+
+.bio > p {
+  font-size: 24px;
+  /* font-family: monospace; */
+}
+
+.intro {
+  font-size: 40px;
+  transition: 1900ms;
+  /* font-family: monospace; */
+}
+
+.home-img {
+  margin: 25px;
+  opacity: 0.7;
+  border-radius: 40px;
+}
+
+img {
+  width: 450px;
+  display: flex;
+  margin: 25px;
+  float: right;
+  border-radius: 10px;
+  transition: 2000ms;
+}
+
+.fav-quote {
+  display: absolute;
+  margin: 115px;
+  left: 50px;
+  font-family: cursive;
+  font-size: 33px;
+}
+
+/* below is css for portfolio page */
+.container-portfolio {
+  margin-top: 75px;
+}
+
+.container-portfolio > h1 {
+  font-size: 35px;
+  text-decoration: underline;
+  color: #9661b4;
+}
+
+.project-card {
+  width: 300px;
+  height: 450px;
+  border: 2px solid rgb(63, 58, 58);
+  margin: 5px;
+  box-shadow: 5px 5px 20px;
+}
+
+.project-card > img {
+  width: 220px;
+  height: 150px;
+  border: 2px solid gray;
+  display: flex;
+  justify-content: center;
+}
+
+.project-card > h3 {
+  text-align: center;
+  color: #25bf87;
+  font-size: 25px;
+}
+
+.project-card > p {
+  text-align: center;
+  font-family: 'Ysabeau Infant', sans-serif;
+  word-spacing: 5px;
+  font-size: 20px;
+  margin: 2px;
+  color: #56C6A9;
+}
+
+.project-card > a {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.project-card > hr {
+  margin: 15px;
+}
+
+.project-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+h1 {
+  text-align: center;
+  color:deepskyblue
+}
+
+h3 {
+  color:mediumslateblue;
+  text-decoration: underline;
+}
+
+body {
+  background-color: gainsboro;
+}
+
+/* below is css for about me page */
+.about-me {
+  margin-top: 85px;
+  margin-right: 75px;
+}
+
+.ps5 {
+  height: 250px;
+  width: 350px;
+}
+
+.re, .games {
+  display: inline-block;
+}
+
+.re-movie, .lift {
+  width: 350px;
+}
