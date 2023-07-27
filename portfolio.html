@@ -1,51 +1,102 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <script defer src="app.js"></script>
     <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Infant:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ysabeau+Infant:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @media (max-width: 690px) {
+        .project-card {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div class="navbar">
+    <header class="navbar">
       <p class="name">MONIQUE AVILA</p>
-      <a class="pages" href="/index.html">HOME</a>
-      <a class="pages" href="/about.html">ABOUT</a>
-      <a class="pages" href="/portfolio.html">PORTFOLIO</a>
-    </div>
+      <nav>
+        <a class="pages" href="/about.html">ABOUT</a>
+        <a class="pages" href="/portfolio.html">PORTFOLIO</a>
+        <a href="/contact.html" class="pages">CONTACT</a>
+        <a class="pages" href="/index.html">HOME</a>
+      </nav>
+      <button class="hamburger">
+        <div class="bar"></div>
+      </button>
+    </header>
+    <!-- for mobile nav -->
+    <nav class="mobile-nav">
+      <a href="/about.html">ABOUT</a>
+      <a href="/portfolio.html">PORTFOLIO</a>
+      <a href="/contact.html">CONTACT</a>
+      <a href="/index.html">HOME</a>
+    </nav>
     <section class="container-portfolio">
-      <h1>Some of my projects I have created!</h1>
+      <h1 class="w3-animate-bottom">Some of my projects I have created!</h1>
       <div class="project-container">
         <div class="project-card">
-          <img src="/assets/images/project2.png" alt="money height project">
+          <img src="/assets/images/project2.png" alt="money height project" />
           <h3>Money height</h3>
-          <p>This was a project I thought of randomly and built. It will tell you
+          <p>
+            This was a project I thought of randomly and built. It will tell you
             how many bills in USD you would need in order to reach your height!
           </p>
-          <hr>
-          <a href="https://github.com/Moniii333/Whats-your-height-worth/tree/main" target="_blank">View project code here!</a>
+          <hr />
+          <a
+            href="https://github.com/Moniii333/Whats-your-height-worth/tree/main"
+            target="_blank"
+            >View project code here!</a
+          >
         </div>
         <div class="project-card">
-          <img src="assets/images/project1.png" alt="meme generator project">
+          <img src="assets/images/project1.png" alt="meme generator project" />
           <h3>Meme generator</h3>
-          <p>This was one of my first big projects a lot of trial and error and
+          <p>
+            This was one of my first big projects a lot of trial and error and
             some cool new tricks I learned!
           </p>
-          <hr>
-          <a href="https://github.com/Moniii333/Dank_Memes/tree/main" target="_blank">View project code here!</a>
+          <hr />
+          <a
+            href="https://github.com/Moniii333/Dank_Memes/tree/main"
+            target="_blank"
+            >View project code here!</a
+          >
         </div>
         <div class="project-card">
-          <img src="assets/images/project3.png" alt="quote gen project">
+          <img src="assets/images/project3.png" alt="quote gen project" />
           <h3>Random quote generator</h3>
-          <p>Just a quick and simple random quote generator. I used this
-            as practice implementing APIs.
+          <p>
+            Just a quick and simple random quote generator. I used this as
+            practice implementing APIs.
           </p>
-          <hr>
-          <a href="https://github.com/Moniii333/randomQuotesGen" target="_blank">View project code here!</a>
+          <hr />
+          <a href="https://github.com/Moniii333/randomQuotesGen" target="_blank"
+            >View project code here!</a
+          >
         </div>
       </div>
     </section>
   </body>
+  <script>
+     // had to add js to individual files for some reason
+    //it was not working other than on the home page
+  document.addEventListener('DOMContentLoaded', function() {
+  const menubtn = document.querySelector('.hamburger');
+  const mobileNav = document.querySelector('.mobile-nav');
+
+  menubtn.addEventListener('click', function() {
+  menubtn.classList.toggle('is-active');
+  mobileNav.classList.toggle('is-active');
+});
+});
+  </script>
 </html>

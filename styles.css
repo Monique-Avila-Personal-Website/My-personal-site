@@ -7,45 +7,52 @@
     display: flex;
     margin: 20px;
   }
+  .contactform {
+    height: 75%;
+  }
 }
 
 /* home page styling */
 .navbar {
-  overflow: hidden;
   position: fixed;
   top: 0;
   width: 100%;
   height: 55px;
-  background-color:lavender;
+  background-color:#7B6CF6;
   margin-bottom: 10px;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav > a {
+  margin: 0 15px ;
 }
 
 .name {
-  display:inline-block;
-  font-weight: bolder;
   font-size: 25px;
-  margin-top: 15px;
+  margin: 15px 0px 10px;
   font-family: 'Ysabeau Infant', sans-serif;
 }
 
 p {
   font-family: 'Ysabeau Infant', sans-serif;
+  color: #F6F4EB;
 }
 
 .pages {
-  margin: 20px;
+  color: #F6F4EB;
+  border-radius: 8px;
+  height: 25px;
   float: right;
   text-decoration: none;
-}
-
-.pages:hover {
-  background-color: azure;
-  color:cyan;
-}
-/* bro fix this so active page is diff color! */
-.pages::after {
+  &:hover {
   background-color: aliceblue;
-  color: crimson;
+  color:#E5A5FF;
+  cursor: pointer;
+  text-decoration: underline;
+  }
 }
 
 .fa-twitter {
@@ -74,27 +81,30 @@ p {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color:lavenderblush;
+  background-color:#816797;
   
 }
 
 .bio {
   display: flexbox;
   margin-top: 70px;
-  margin-left: 25%;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  width: 50%;
+  width: 70%;
 }
 
 .bio > p {
   font-size: 24px;
-  /* font-family: monospace; */
 }
 
 .intro {
   font-size: 40px;
   transition: 1900ms;
-  /* font-family: monospace; */
+}
+
+.myintro {
+  z-index: -1;
 }
 
 .home-img {
@@ -118,6 +128,7 @@ img {
   left: 50px;
   font-family: cursive;
   font-size: 33px;
+  color: #F6F4EB;
 }
 
 /* below is css for portfolio page */
@@ -127,13 +138,12 @@ img {
 
 .container-portfolio > h1 {
   font-size: 35px;
-  text-decoration: underline;
-  color: #9661b4;
+  color: #916BBF;
 }
 
 .project-card {
   width: 300px;
-  height: 450px;
+  height: 470px;
   border: 2px solid rgb(63, 58, 58);
   margin: 5px;
   box-shadow: 5px 5px 20px;
@@ -149,7 +159,7 @@ img {
 
 .project-card > h3 {
   text-align: center;
-  color: #25bf87;
+  color: #F6F4EB;
   font-size: 25px;
 }
 
@@ -159,17 +169,19 @@ img {
   word-spacing: 5px;
   font-size: 20px;
   margin: 2px;
-  color: #56C6A9;
+  color: #F6F4EB;
 }
 
 .project-card > a {
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
+  color: #55ACEE;
 }
 
 .project-card > hr {
   margin: 15px;
+  color:aliceblue;
 }
 
 .project-container {
@@ -179,7 +191,7 @@ img {
 
 h1 {
   text-align: center;
-  color:deepskyblue
+  /* color:deepskyblue */
 }
 
 h3 {
@@ -188,7 +200,7 @@ h3 {
 }
 
 body {
-  background-color: gainsboro;
+  background-color: #180A0A;
 }
 
 /* below is css for about me page */
@@ -208,4 +220,137 @@ body {
 
 .re-movie, .lift {
   width: 350px;
+}
+
+/* css for contact page */
+.contactform {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  box-shadow: 3px 9px 15px rgba(255, 255, 255, .8);
+  height: 50vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 70px;
+  width: 50vh;
+  background-blend-mode: darken;
+  background: url(assets/images/elephant.jpg) 0 0 no-repeat;
+  background-size: 520px;
+}
+
+.contacth1 {
+  margin-top: 15%;
+  font-size: 40px;
+  color: #916BBF;
+  width: 100%;
+  height: 5rem;
+}
+
+.contactbtn {
+  left: 42%;
+  position: absolute;
+  bottom: 10%;
+  font-size: 1.5rem;
+  color: azure;
+  width: 5rem;
+  height: 2.5rem;
+  background-color: transparent;
+  /* border: 5px; */
+  border-image: linear-gradient(to right, rgb(104, 104, 244), rgb(204, 50, 191)) 1;
+  box-shadow: 0 6px 6px rgba(2, 10, 50, .8);
+  &:hover {
+    cursor: pointer;
+    
+  }
+}
+
+.userinput {
+  justify-content: space-around;
+  
+}
+
+/* hamburger code */
+.hamburger {
+  position: relative;
+  display: block;
+  width: 35px;
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.hamburger .bar, .hamburger:after, .hamburger:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0px;
+  transition: 0.4s;
+}
+
+.hamburger.is-active::before {
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active:after {
+  transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+/* mobile nav */
+.mobile-nav {
+  opacity: .8;
+  display: block;
+  position: fixed;
+  top: 7%;
+  left: 100%;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 1;
+  background-color: #120021;
+  padding-top: 120px;
+  transition: 0.5s;
+}
+
+.mobile-nav.is-active {
+  left: 20px;
+}
+
+.mobile-nav > a {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  max-width: 120px;
+  margin: 0 auto 16px;
+  padding: 12px 16px;
+  box-shadow: 8px 7px 14px #a398f4;
+  background-color: #6461c2;
+  color: #fef3fc;
+
+  &:hover {
+    background-color: #998df2;
+  }
+}
+
+/* mobile nav media */
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 770px) {
+  .pages {
+    display: none;
+  }
 }

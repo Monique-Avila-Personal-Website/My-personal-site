@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Infant:wght@300&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- link below is for cool animations! -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <title>Inquiry submitted</title>
+  </head>
+  <body>
+    <header class="navbar">
+      <p class="name">MONIQUE AVILA</p>
+      <nav>
+        <a class="pages" href="/about.html">ABOUT</a>
+        <a class="pages" href="/portfolio.html">PORTFOLIO</a>
+        <a href="/contact.html" class="pages">CONTACT</a>
+        <a class="pages" href="/index.html">HOME</a>
+      </nav>
+      <button class="hamburger">
+        <div class="bar"></div>
+      </button>
+    </header>
+    <!-- for mobile nav -->
+    <nav class="mobile-nav">
+      <a href="/about.html">ABOUT</a>
+      <a href="/portfolio.html">PORTFOLIO</a>
+      <a href="/contact.html">CONTACT</a>
+      <a href="/index.html">HOME</a>
+    </nav>
+    <div class="thanks">
+      <h2 class="w3-animate-left">Thank you for reaching out!</h2>
+      <p class="w3-animate-bottom">
+        I typically respond within 24-48 hours, and I look forward to speaking
+        with you. Thank you for your patience!
+      </p>
+      <div class="w3-spin fa fa-spinner loading"></div>
+    </div>
+  </body>
+  <style>
+    .thanks {
+      margin: 20% auto;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      height: 50vh;
+      width: 55vh;
+      flex-wrap: wrap;
+    }
+
+    h2 {
+      font-size: 3rem;
+      text-align: center;
+      color: #916bbf;
+    }
+
+    p {
+      text-align: center;
+      font-size: 28px;
+    }
+
+    .loading {
+      position: absolute;
+      font-size: 28px;
+      bottom: 0;
+      color: ghostwhite;
+    }
+  </style>
+  <script>
+    // had to add js to individual files for some reason
+    //it was not working other than on the home page
+  document.addEventListener('DOMContentLoaded', function() {
+  const menubtn = document.querySelector('.hamburger');
+  const mobileNav = document.querySelector('.mobile-nav');
+
+  menubtn.addEventListener('click', function() {
+  menubtn.classList.toggle('is-active');
+  mobileNav.classList.toggle('is-active');
+});
+});
+  </script>
+</html>

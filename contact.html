@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me!</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ysabeau+Infant:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      label,
+      input {
+        display: block;
+      }
+      label {
+        margin-top: 10px;
+      }
+      input,
+      textarea {
+        background-color: transparent;
+        color: aliceblue;
+        border: 2px solid rgba(255, 255, 242, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <p class="name">MONIQUE AVILA</p>
+      <nav>
+        <a class="pages" href="/about.html">ABOUT</a>
+        <a class="pages" href="/portfolio.html">PORTFOLIO</a>
+        <a href="/contact.html" class="pages">CONTACT</a>
+        <a class="pages" href="/index.html">HOME</a>
+      </nav>
+      <button class="hamburger">
+        <div class="bar"></div>
+      </button>
+    </header>
+    <!-- for mobile nav -->
+    <nav class="mobile-nav">
+      <a href="/about.html">ABOUT</a>
+      <a href="/portfolio.html">PORTFOLIO</a>
+      <a href="/contact.html">CONTACT</a>
+      <a href="/index.html">HOME</a>
+    </nav>
+    <h1 class="contacth1">Get in touch with me!</h1>
+    <div class="contactform">
+      <div id="userinput">
+        <form action="formsubmit.html">
+          <label for="contactName"></label>
+          <input
+            id="contactName"
+            type="text"
+            name="name"
+            placeholder="Name"
+            required
+            autocomplete="name"
+          />
+          <br />
+          <label for="contactEmail"></label>
+          <input
+            id="contactEmail"
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+            autocomplete="email"
+          />
+          <br />
+          <label for="message"></label>
+          <textarea
+            id="message"
+            cols="20"
+            rows="10"
+            placeholder="Message"
+            required
+          ></textarea>
+          <br />
+          <button type="submit" class="contactbtn">Send</button>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script>
+    // had to add js to individual files for some reason
+    //it was not working other than on the home page
+  document.addEventListener('DOMContentLoaded', function() {
+  const menubtn = document.querySelector('.hamburger');
+  const mobileNav = document.querySelector('.mobile-nav');
+
+  menubtn.addEventListener('click', function() {
+  menubtn.classList.toggle('is-active');
+  mobileNav.classList.toggle('is-active');
+});
+});
+  </script>
+</html>
