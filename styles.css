@@ -319,7 +319,7 @@ body {
 }
 
 .mobile-nav.is-active {
-  left: 20px;
+  left: 0;
 }
 
 .mobile-nav > a {
