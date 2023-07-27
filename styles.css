@@ -201,6 +201,8 @@ h3 {
 
 body {
   background-color: #180A0A;
+  margin: 0;
+  padding: 0;
 }
 
 /* below is css for about me page */
@@ -220,6 +222,13 @@ body {
 
 .re-movie, .lift {
   width: 350px;
+}
+
+.about, .movie, .gym {
+  font-size: 24px;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* css for contact page */
